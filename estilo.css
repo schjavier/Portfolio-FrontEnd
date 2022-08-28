@@ -1,0 +1,116 @@
+html{
+background-color: #000000;
+scroll-behavior: smooth;}
+
+body {background-color: #000000 !important;}
+
+header {background-color: BLACK;}
+
+
+/* estilos de header */
+img.img-header {
+background-color: BLACK;
+width:100px;
+height:75px;
+margin-top:10px;
+}
+
+header h6 {
+padding-top:25px;
+color:white;
+
+}
+
+.social a {
+padding: 10px 10px;
+margin-right: 5px; 
+
+}
+
+/* estilos de banner */
+.banner {
+background-color:#000000;
+z-index:1;
+}
+
+.img-banner {
+max-width:100%;
+height:auto;
+}
+
+
+
+/* estilos de sobre-banner */
+
+.img-self {
+border-radius:100px;
+max-width:100%;
+height:auto;
+
+}
+
+#sobre-banner{
+position:relative;
+top:-100px;
+z-index:2;
+}
+
+#nombre{
+color:white;
+text-align:right;
+margin-top:50px;
+font-size: 50px;
+font-family:bubblegum Sans;
+}
+
+p {
+text-align:right;
+color:white;
+font-family:bubblegum Sans;
+font-size: 25px;
+
+}
+
+/* estilos de section */
+
+section.experiencia{
+position:relative;
+top:-100px;
+background-color: #000000;
+
+}
+
+section p {
+
+text-align:center;
+color:white;
+font-size:20px;
+}
+
+section h3 {
+color:white;
+font-family:bubblegum Sans;
+text-align:center;
+/**font-size:35px;**/
+}
+
+section h4 {
+color:white;
+font-family:bubblegum Sans;
+text-align:justify;
+/**font-size:25px;**/
+}
+
+.img-exp {
+max-width:100%;
+height:auto;
+margin-top:20px;
+border-radius:15px 0px 15px 0px;
+
+}
+
+.empresa{
+text-align: left;
+
+}
+
