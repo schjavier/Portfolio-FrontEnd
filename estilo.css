@@ -51,7 +51,7 @@ height:auto;
 
 #sobre-banner{
 position:relative;
-top:-100px;
+top:-150px;
 z-index:2;
 }
 
@@ -114,3 +114,69 @@ text-align: left;
 
 }
 
+.educacion{
+text-align:left;
+}
+
+.img-edu {
+max-width:100%;
+max-height:50%;
+margin-top:20px;
+
+}
+/** comienzo de estilo de barras de progreso de skills **/
+
+.skills{
+padding-top:30px;
+
+}
+
+.circular-progress{
+width:12rem;
+height:12rem;
+background:linear-gradient(0deg, #fff 50%, #800080 50%);
+border-radius:50%;
+margin:auto;
+position:relative;
+transform: rotate(90deg);
+}
+
+.circular-progress::before {
+width:12rem;
+height:12rem;
+position:absolute;
+top:0;
+left:0;
+background:#000 content-box;
+content:"Html5";
+border-radius:50%;
+padding:.5em;
+box-sizing: border-box;
+font-size: 1.5rem;
+color:#fff;
+text-align:center;
+line-height:8rem;
+transform:rotate(-90deg);
+}
+
+.circular-progress::after{
+width:12rem;
+height:12rem;
+position:absolute;
+top:0;
+left:0;
+background:#000;
+content:"50%";
+border-radius:50%;
+background:linear-gradient(
+	transparent 50%,
+	#000 50%
+);
+transform:scale(1.1) rotate(-90deg);
+text-align:center;
+color:#fff;
+line-height: 13rem;
+
+}
+
+/** fin de estilo barras de progreso**/
