@@ -7,7 +7,6 @@
 <head>
 <meta charset="utf-8" />
 <title>Portfolio</title>
-<meta name="generator" content="Geany 1.33" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Css propio -->
 <link href="estilo.css" rel="stylesheet">
@@ -15,7 +14,7 @@
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- Iconos de Boostrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
-<!-- Funtes de Google (completar)-->
+<!-- Funtes de Google -->
 <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"> 
 
 </head>
@@ -31,9 +30,48 @@
 	<ul class="social nav navbar-nav navbar-right">	
 		<li class="nav-item"><a href="https://www.instagram.com"><i class="bi bi-instagram" style="color:white"></i></a></li>
 		<li class="nav-item"><a href="https://www.github.com/schjavier"><i class="bi bi-github" style="color:white"></i></a></li>
-		<li class="nav-item"><a href="/login.html"><i class="bi bi-person-circle" style="color:white"></i></a></li>
+		<li class="nav-item"><a data-bs-toggle="modal" href="#staticBackdrop"><i class="bi bi-person-circle" style="color:white"></i></a></li>
 	</ul>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title login-title" id="staticBackdropLabel">LogIn</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<!-- formulario de logeo -->
+			<div class="container">
+				<form>
+					<div class="mb-3">
+						<label for="email" class="form-label">Email:</label>
+						<input type="email" class="form-control" id="email" placeholder="Ingrese Email" name="email">	
+					</div>
+					<div class="mb-3">
+						<label for="pwd" class="form-label">Contraseña:</label>
+						<input type="password" class="form-control" id="pwd" placeholder="Ingrese Password" name="pswd">
+					</div>
+					<div class="form-check mb-3">
+						<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" name="remember"> Recuerdame
+						</label>
+					</div>
+				</form>
+			</div>
+
+		</div>
+		<div class="login-footer modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+		  <button type="submit" class="btn btn-primary">Ingresar</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
 </div>	
+
+
 </header>
 
 <div class="banner container-fluid ">
@@ -44,8 +82,8 @@
 
 <div id="sobre-banner" class="container">	
 	<div class="row"> <!-- resolver problema al reducir pantalla -->
-		<div class="col-4"><img class="img-fluid img-self" src="grafica/selfie.jpg"></div>	
-		<div class="col-8">
+		<div class="col-sm-4"><img class="img-fluid img-self" src="grafica/selfie.jpg.jpg"></div>	
+		<div class="col-sm-8">
 			<h2 id="nombre">Javier Schettini</h2>
 			<p>Full Stack Developer jr.</p>
 		</div>
@@ -53,18 +91,18 @@
 </div>
 
 <section>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<div class="col-12-md">
+			<div class="col-sm-12">
 			<p> Acerca de mi! :) </p>
 			</div>
 		</div>
 	</div>
 
 
-	<div class="experiencia container-fluid">
+	<div class="experiencia container">
 		<div class="row">
-			<div class="col-12-sm">
+			<div class="col-sm-12">
 			<h3>Experiencia</h3>
 			
 			</div>	
@@ -73,19 +111,22 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-3"><a href="https://rosariosolutions.com"><img class="img-fluid img-exp" src="grafica/Rs.jpeg" alt="Rosario Solutions Logo"></a></div>
-			<div class="col-9">
+			<div class="col-sm-3"><a href="https://rosariosolutions.com"><img class="img-fluid img-exp" src="grafica/Rs.jpeg" alt="Rosario Solutions Logo"></a></div>
+			<div class="col-sm-8">
 				<h4><b>IT Technician - Web Admin </b><small> [2015 - 2017]</small></h4>
-				<p class="empresa">Diagnóstico de problemas informáticos, 
+					<p class="empresa">Diagnóstico de problemas informáticos, 
 				supervisor de sistemas de procesamiento, instalar software, además realizar 
 				pruebas en equipos y programas informáticos.<br>
 				Modificaciones de paginas web empresariales.				
 				</p>
 			</div>
+			<div class="col-sm-1">
+				<button class="btn bi bi-pencil editar"></button>
+			</div>
 		</div>
 	</div>
 
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-12"><h3>Educación</h3></div>
 		</div>
@@ -93,43 +134,54 @@
 	
 	<div class="container">
 		<div class="row">
-			<div class="col-3"><img class="img-fluid img-edu" src="grafica/fceia.png" alt="logo facultad rosario"></div>
-			<div class="col-9">
+			<div class="col-sm-3"><img class="img-fluid img-edu" src="grafica/fceia.png" alt="logo facultad rosario"></div>
+			<div class="col-sm-8">
 			
-				<h4><strong>Liceciatura en Ciecias de la Computación</strong><small> [2015 - 2016]</small></h4>
+				<h4><strong>Liceciatura en Ciencias de la Computación</strong><small> [2015 - 2016]</small></h4>
 				<p class="educacion">Primer año de la carrera de LCC, materias cursadas: programacion, análisis
 				matemático y álgebra.			
 				</p>					
 			
 			</div>
+			<div class="col-sm-1">
+				<button class="btn bi bi-pencil editar"></button>
+			</div>
 		</div>
 	</div>
 
-<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<div class="col-12"><h3>Habilidades</h3></div>
+			<div class="col-sm-11"><h3>Habilidades</h3></div>
+		
+			<div class="col-sm-1">
+				<button class="btn bi bi-pencil editar"></button>
+			</div>
 		</div>
 	</div>
 	
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row skills">
 			<div class="col-3"><div class="circular-progress"></div></div>
-			<div class="col-3"><div class="circular-progress"></div></div>
-			<div class="col-3"><div class="circular-progress"></div></div>
-			<div class="col-3"><div class="circular-progress"></div></div>
+			<div class="col-3"><div class="circular-progress2"></div></div>
+			<div class="col-3"><div class="circular-progress3"></div></div>
+			<div class="col-3"><div class="circular-progress4"></div></div>
 		</div>
 	</div>
 
-<div class="container-fluid">
+	<div class="container proyecto">
 		<div class="row">
-			<div class="col-12"><h3>Proyectos</h3></div>
+			<div class="col-sm-11"><h3>Proyectos</h3></div>
+				<div class="col-sm-1">
+					<button class="btn bi bi-pencil editar"></button>
+				</div>
 		</div>
 	</div>
 	
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<div class="col-3"></div>
-			<div class="col-9"></div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-8"></div>
+			<div class="col-sm-1"></div>
 		</div>
 	</div>
 </section>
